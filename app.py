@@ -1,23 +1,6 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 import csv
-
-class Nodo:
-    def __init__(self,tasaMetabolica,indice_cl,velocidadAire,nombreNodo,temperaturaAmbiente,temperaturaInterna,
-                 materialPared,humedadAire,cantidadPersonas,capacidad):
-        self.nombreNodo = nombreNodo
-        self.tasaMetabolica = tasaMetabolica
-        self.indice_cl = indice_cl
-        self.velocidadAire = velocidadAire
-        self.temperaturaAmbiente = temperaturaAmbiente
-        self.temperaturaInterna =temperaturaInterna
-        self.materialPared = materialPared
-        self.humedadAire = humedadAire
-        self.cantidadPersonas = cantidadPersonas
-        self.capacidad = capacidad
-        self.temperaturaOperativa = 0
-        self.habitabilidad = False
-        
         
 # Creación de grafo vacío
 G = nx.Graph() 
@@ -87,8 +70,6 @@ ubica_atributos = {nombreVertices[0]: (0, 1), nombreVertices[1]: (3, -2), nombre
          nombreVertices[15]: (5,37)}
 
 
-
-
 #Análisis habitabilidad
 def calcularVelocidadRelativa(va,m):
     velocidadRelativa = va + 0.3*(m-1)
@@ -152,15 +133,4 @@ plt.show()
 
 
 
-
-
-
-
-
-#print(nx.adjacency_matrix(G).todense())
-
-'''
-for i in nodos:
-    if i.nombreNodo == '105':
-        print (i.capacidad)
-'''   
+ 
